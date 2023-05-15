@@ -33,23 +33,60 @@ export class News extends Component {
   // ];
   constructor() {
     super();
-    console.log("HELLO");
+    // console.log("HELLO");
 
     this.state = {
       articles: [],
       loading: false,
+      page: 1,
     };
   }
 
-  async componentDidMount(){  // it is a lifecycle method which runs before the render method
+  async componentDidMount() {
+    // it is a lifecycle method which runs before the render method
     console.log("cdm");
-    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67";
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=1&pageSize=20";
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
-    this.setState({articles: parsedData.articles})
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+    });
   }
-  
+
+  handlePrevClick = async () => {
+    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=${
+      this.state.page - 1
+    }&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+
+    this.setState({
+      page: this.state.page - 1,
+      articles: parsedData.articles,
+    });
+  };
+
+  handleNextClick = async () => {
+    if (this.state.page + 1 > Math.ceil(this.state.totalResults / 20)) {
+    } else {
+      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=${
+        this.state.page + 1
+      }&pageSize=20`;
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      console.log(parsedData);
+
+      this.setState({
+        page: this.state.page + 1,
+        articles: parsedData.articles,
+      });
+      console.log("next");
+    }
+  };
 
   render() {
     return (
@@ -57,15 +94,37 @@ export class News extends Component {
         <h1>NewsMonkey - Top headlines</h1>
         <div className="row">
           {this.state.articles.map((e) => {
-            return <div className="col-md-4" key={e.url}>
-              <NewsItems
-                title={e.title?e.title:""}
-                description={e.description?e.description:""}
-                imageUrl={e.urlToImage}
-                newsUrl={e.url}
-              />
-            </div>;
+            return (
+              <div className="col-md-4" key={e.url}>
+                <NewsItems
+                  title={e.title ? e.title : ""}
+                  description={e.description ? e.description : ""}
+                  imageUrl={e.urlToImage}
+                  newsUrl={e.url}
+                />
+              </div>
+            );
           })}
+        </div>
+
+        <div className="container d-flex justify-content-between">
+          <button
+            disabled={this.state.page <= 1}
+            type="button"
+            className="btn btn-dark"
+            onClick={this.handlePrevClick}
+          >
+            {" "}
+            &larr; PREVIOUS
+          </button>
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={this.handleNextClick}
+          >
+            {" "}
+            NEXT &rarr;
+          </button>
         </div>
       </div>
     );
