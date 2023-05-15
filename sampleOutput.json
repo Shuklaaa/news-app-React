@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import NewsItems from "./NewsItems";
-
-export class News extends Component {
-  articles = [
+{
+  "status": "ok",
+  "totalResults": 2,
+  "articles": [
     {
       "source": { "id": null, "name": "Hindustan Times" },
       "author": "HT Sports Desk",
@@ -24,36 +23,4 @@ export class News extends Component {
       "content": "If you are a climate change warrior or know someone who is doing incredible work in this space, send us your entries and we'll bring the most innovative stories to the world."
     }
   ]
-  constructor(){
-    super();
-    console.log("HELLO");
-
-    this.state  = {
-      articles: this.articles,
-      loading: false
-    }
-  }
-
-  render() {
-    return (
-      <div className="container my-3">
-        <h2>NewsMonkey - Top headlines</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <NewsItems title="myTitle" description="myDescrp" imageUrl="https://www.hindustantimes.com/ht-img/img/2023/05/14/1600x900/FwEbNYTacAEC-BX_1684047610758_1684047642133.jpeg"/>
-          </div>
-
-          <div className="col-md-4">
-            <NewsItems title="myTitle" description="myDescrp" />
-          </div>
-
-          <div className="col-md-4">
-            <NewsItems title="myTitle" description="myDescrp" />
-          </div>
-        </div>
-      </div>
-    );
-  }
 }
-
-export default News;
