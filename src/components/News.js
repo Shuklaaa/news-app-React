@@ -48,12 +48,14 @@ export class News extends Component {
     console.log("cdm");
     let url =
       `https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=1&pageSize=${this.props.pageSize}`;
+    this.setState({loading: true});
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
     this.setState({
       articles: parsedData.articles,
       totalResults: parsedData.totalResults,
+      loading: false
     });
   }
 
@@ -61,6 +63,7 @@ export class News extends Component {
     let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
+    this.setState({loading: true});
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
@@ -68,24 +71,27 @@ export class News extends Component {
     this.setState({
       page: this.state.page - 1,
       articles: parsedData.articles,
+      loading: false
     });
   };
 
   handleNextClick = async () => {
-    if (this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)) {
+    if ((this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize))) {
     } else {
       let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=61472ccaace94da391859b9996c3ea67&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
+      this.setState({loading: true});
       let data = await fetch(url);
       let parsedData = await data.json();
-      console.log(parsedData);
+      // console.log(parsedData);
 
       this.setState({
         page: this.state.page + 1,
         articles: parsedData.articles,
+        loading: false
       });
-      console.log("next");
+      // console.log("next");
     }
   };
 
@@ -93,9 +99,9 @@ export class News extends Component {
     return (
       <div className="container my-3">
         <h1 className="text-center">NewsMonkey - Top headlines</h1>
-        <Spinner/>
+        {this.state.loading && <Spinner/>}
         <div className="row">
-          {this.state.articles.map((e) => {
+          {!this.state.loading && this.state.articles.map((e) => {
             return (
               <div className="col-md-4" key={e.url}>
                 <NewsItems
