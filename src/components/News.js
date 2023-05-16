@@ -8,14 +8,14 @@ export class News extends Component {
 
   static defaultProps = {
     country: "in",
-    pageSize: 9,
+    pageSize: 6,
     category: "general"
   }
 
   static propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
-    category: PropTypes.string
+    category: PropTypes.string,
   }
   // articles = [
   //   {
@@ -48,7 +48,6 @@ export class News extends Component {
   // ];
   constructor() {
     super();
-    // console.log("HELLO");
 
     this.state = {
       articles: [],
@@ -59,7 +58,7 @@ export class News extends Component {
 
   async componentDidMount() {
     // it is a lifecycle method which runs before the render method
-    console.log("cdm");
+    // console.log("cdm");
     let url =
       `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61472ccaace94da391859b9996c3ea67&page=1&pageSize=${this.props.pageSize}`;
     this.setState({loading: true});
@@ -90,7 +89,7 @@ export class News extends Component {
   };
 
   handleNextClick = async () => {
-    if ((this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize))) {
+    if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize))) {
     } else {
       let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61472ccaace94da391859b9996c3ea67&page=${
         this.state.page + 1
