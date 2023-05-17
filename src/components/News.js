@@ -44,15 +44,19 @@ export class News extends Component {
   //       "If you are a climate change warrior or know someone who is doing incredible work in this space, send us your entries and we'll bring the most innovative stories to the world.",
   //   },
   // ];
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       articles: [],
       loading: false,
       page: 1,
     };
+    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsMonkey`
   }
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
   async updateNews() {
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61472ccaace94da391859b9996c3ea67&page=${this.state.page}&pageSize=${this.props.pageSize}`;
@@ -128,7 +132,7 @@ export class News extends Component {
     return (
       <div className="container my-3">
         <h1 className="text-center" style={{ margin: "35px 0px" }}>
-          NewsMonkey - Top headlines
+          NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines
         </h1>
         {this.state.loading && <Spinner />}
         <div className="row">
