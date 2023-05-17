@@ -28,7 +28,7 @@ export class NewsItems extends Component {
                 : imageUrl
             }
             className="card-img-top"
-            alt="NO IMAGE AVAILABLE"
+            alt=""
           />
           {/* <div class="card-header bg-black text-white">SOURCE : {source}</div> */}
           <div className="card-body">
