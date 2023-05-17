@@ -122,6 +122,8 @@ export class News extends Component {
                   description={e.description ? e.description : ""}
                   imageUrl={e.urlToImage}
                   newsUrl={e.url}
+                  author = {e.author}
+                  date = {e.publishedAt}
                 />
               </div>
             );
