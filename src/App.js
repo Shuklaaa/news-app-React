@@ -9,6 +9,7 @@ import React, { Component } from 'react'
 import News from './components/News';
 import LoadingBar from 'react-top-loading-bar';
 
+
 export default class App extends Component {
   pageSize = 6;     //change this number to change the number of pages or cards viewed at a single time
   apikey = process.env.REACT_APP_NEWS_API;
