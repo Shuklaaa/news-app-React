@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import React, { useState } from 'react'
 import News from './components/News';
+import About from './components/About'
 import LoadingBar from 'react-top-loading-bar';
 
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route exact path='/science' element={<News setProgress={setProgress} apikey={apikey} key="science" pageSize={pageSize} country="in" category="science"/>} />
           <Route exact path='/sports' element={<News setProgress={setProgress} apikey={apikey} key="sports" pageSize={pageSize} country="in" category="sports"/>} />
           <Route exact path='/technology'element={<News setProgress={setProgress} apikey={apikey} key="technology" pageSize={pageSize} country="in" category="technology"/>} />
+          <Route exact path='/about' element={<About/>}></Route>
         </Routes>
       </div>
       </BrowserRouter>
