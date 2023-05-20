@@ -1,3 +1,11 @@
+![ABOUT](https://github.com/Shuklaaa/news-app-React/assets/93446673/71eb76b0-f083-46ea-aa0b-00f84477f850)
+![BUSINESS](https://github.com/Shuklaaa/news-app-React/assets/93446673/b57f158b-082c-483f-8b3e-3d60ffac855a)
+![ENTERTAINMENT](https://github.com/Shuklaaa/news-app-React/assets/93446673/064d4e8a-2a96-4959-90ea-7debb5ee4426)
+![HEALTH](https://github.com/Shuklaaa/news-app-React/assets/93446673/b86a4500-99e2-4ecf-baa5-5b7b84160920)
+![HOME](https://github.com/Shuklaaa/news-app-React/assets/93446673/5cbd6bd0-34a1-4679-9fac-272ee2977210)
+![SCIENCE](https://github.com/Shuklaaa/news-app-React/assets/93446673/79af56f2-b546-49fd-8359-37618a9db869)
+![SPORTS](https://github.com/Shuklaaa/news-app-React/assets/93446673/a5ce4f57-9ecc-447c-bd44-d077b2c0a42c)
+![TECHNOLOGY](https://github.com/Shuklaaa/news-app-React/assets/93446673/12e219f0-4bac-41cc-a73e-f773dadbb4f1)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
