@@ -1,3 +1,7 @@
+This project was built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the API key is taken from newsapi.org.
+
+****** HERE'S A GLIMPSE OF HOW THE WEBSITE LOOKS ******
+
 ![ABOUT](https://github.com/Shuklaaa/news-app-React/assets/93446673/71eb76b0-f083-46ea-aa0b-00f84477f850)
 ![BUSINESS](https://github.com/Shuklaaa/news-app-React/assets/93446673/b57f158b-082c-483f-8b3e-3d60ffac855a)
 ![ENTERTAINMENT](https://github.com/Shuklaaa/news-app-React/assets/93446673/064d4e8a-2a96-4959-90ea-7debb5ee4426)
@@ -8,7 +12,7 @@
 ![TECHNOLOGY](https://github.com/Shuklaaa/news-app-React/assets/93446673/12e219f0-4bac-41cc-a73e-f773dadbb4f1)
 
 
-This project was built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the API key is taken from newsapi.org.
+
 
 ## Available Scripts
 
