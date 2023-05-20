@@ -6,9 +6,9 @@
 ![SCIENCE](https://github.com/Shuklaaa/news-app-React/assets/93446673/79af56f2-b546-49fd-8359-37618a9db869)
 ![SPORTS](https://github.com/Shuklaaa/news-app-React/assets/93446673/a5ce4f57-9ecc-447c-bd44-d077b2c0a42c)
 ![TECHNOLOGY](https://github.com/Shuklaaa/news-app-React/assets/93446673/12e219f0-4bac-41cc-a73e-f773dadbb4f1)
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project was built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the API key is taken from newsapi.org.
 
 ## Available Scripts
 
