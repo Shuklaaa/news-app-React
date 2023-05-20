@@ -1,4 +1,4 @@
-This project was built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the API key is taken from newsapi.org.
+This project is built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the API key is taken from newsapi.org.
 
 ****** HERE'S A GLIMPSE OF HOW THE WEBSITE LOOKS ******
 
