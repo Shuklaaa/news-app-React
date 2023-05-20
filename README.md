@@ -2,6 +2,8 @@ This project was built using HTML, CSS, JAVASCRIPT, REACTJS, BOOTSTRAP and the A
 
 ****** HERE'S A GLIMPSE OF HOW THE WEBSITE LOOKS ******
 
+https://github.com/Shuklaaa/news-app-React/assets/93446673/79833478-2abe-4285-b54f-d60150ad6d4f
+
 ![ABOUT](https://github.com/Shuklaaa/news-app-React/assets/93446673/71eb76b0-f083-46ea-aa0b-00f84477f850)
 ![BUSINESS](https://github.com/Shuklaaa/news-app-React/assets/93446673/b57f158b-082c-483f-8b3e-3d60ffac855a)
 ![ENTERTAINMENT](https://github.com/Shuklaaa/news-app-React/assets/93446673/064d4e8a-2a96-4959-90ea-7debb5ee4426)
@@ -80,3 +82,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+https://github.com/Shuklaaa/news-app-React/assets/93446673/79833478-2abe-4285-b54f-d60150ad6d4f
+
