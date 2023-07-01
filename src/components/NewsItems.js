@@ -43,7 +43,6 @@ const NewsItems = (props) => {
             </a>
           </div>
         </div>
-
         {/* <div className="card text-bg-dark">
   <img src={!imageUrl?"https://images.hindustantimes.com/tech/img/2023/05/14/cropped/16-9/asteroid_1681212528521_1684061754139.jpg?impolicy=new-ht-20210112&width=1600/":imageUrl} className="card-img" alt="..."/>
   <div className="card-img-overlay">

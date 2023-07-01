@@ -14,7 +14,6 @@ const News = (props) => {
   const capitalizeFirstLetter =(string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-  
   // articles = [
   //   {
   //     source: { id: null, name: "Hindustan Times" },
@@ -55,7 +54,6 @@ const News = (props) => {
     // };
     
   // }
-
   const updateNews = async()=> {
     props.setProgress(10);  //initial progress
 

@@ -31,8 +31,6 @@ export default function About() {
           <a className="btn btn-dark" rel="noreferrer" target="_blank" style={{backgroundColor: '#ac2bac'}} href="https://www.instagram.com/abhishekkshuklaaaaa" role="button">
             <i className="fab fa-instagram"></i>
           </a>
-
-          
         </div>
       </div>
     </div>
